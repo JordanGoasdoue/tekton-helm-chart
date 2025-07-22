@@ -23,6 +23,9 @@ spec:
           {{- end }}
       containers:
       - name: webhook
+        resources:
+          helmTemplateRemoveMe: |
+            {{- toYaml  .Values.webhook.resources |  nindent 10 }}
         envFrom:
         - secretRef:
             name: "{{ .Values.webhook.envFromSecret }}"

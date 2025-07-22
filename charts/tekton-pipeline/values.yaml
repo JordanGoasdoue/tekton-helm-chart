@@ -59,6 +59,7 @@ webhook:
                   - windows
   tolerations: []
   nodeSelector: {}
+  resources: {}
 # Values to amend tekton-pipelines-remote-resolvers
 remoteresolver:
   affinity: {}
